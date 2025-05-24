@@ -2,11 +2,13 @@
 Aplicativo simples criado com React Native e Expo para simular o mapeamento do pátio e gestão de motos.
 
 ✅ Instalação
+
 1️⃣ Clone o projeto:
 bash
 Copiar código
 git clone <URL do GitHub Classroom>
 cd patio-motos
+
 2️⃣ Instale as dependências:
 bash
 Copiar código
