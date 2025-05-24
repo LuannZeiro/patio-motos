@@ -13,9 +13,9 @@ const motos = [
     modelo: 'Mottu Sport 110i',
     placa: 'ABC-1234',
     vaga: 'A2',
-    cor: 'Preta',
+    cor: 'Verde',
     ano: '2023',
-    patio: 'Vila Prudente',
+    patio: 'Central',
     chassi: '9C2KC1660HR123456',
     combustivel: '50%',
   },
@@ -23,10 +23,10 @@ const motos = [
     key: 'Mottu-e',
     modelo: 'Mottu-e',
     placa: 'DEF-5678',
-    vaga: 'B4',
-    cor: 'Azul',
+    vaga: 'B3',
+    cor: 'Verde',
     ano: '2021',
-    patio: 'Centro',
+    patio: 'Central',
     chassi: 'XYZ1234567890ABC',
     combustivel: '70%',
   },
@@ -35,9 +35,9 @@ const motos = [
     modelo: 'Mottu',
     placa: 'GHI-9012',
     vaga: 'C1',
-    cor: 'Vermelha',
+    cor: 'Verde',
     ano: '2022',
-    patio: 'Zona Sul',
+    patio: 'Central',
     chassi: 'LMN0987654321XYZ',
     combustivel: '85%',
   },
@@ -52,8 +52,13 @@ export default function HomeScreen() {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.title}>🏠 Bem-vindo ao Pátio de Motos</Text>
-      <Text style={styles.subtitle}>Veja abaixo as motos registradas:</Text>
+      <Image
+        source={require('../assets/logo_mottu.png')}
+        style={styles.logo}
+      />
+
+      <Text style={styles.title}>Pátio Mottu</Text>
+      <Text style={styles.subtitle}>Veja as motos do seu pátio:</Text>
 
       {motos.map((moto, index) => (
         <TouchableOpacity
@@ -62,7 +67,7 @@ export default function HomeScreen() {
           onPress={() => toggleInfo(index)}
           activeOpacity={0.8}
         >
-          {!expandedIndex || expandedIndex !== index ? (
+          {expandedIndex !== index ? (
             <>
               <Image
                 source={motoImages[moto.key]}
@@ -114,6 +119,13 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     alignItems: 'center',
   },
+  logo: {
+    width: 150,
+    height: 50,
+    resizeMode: 'contain',
+    marginBottom: 20,
+    marginTop: 10,
+  },
   title: { 
     fontSize: 26, 
     fontWeight: 'bold', 
@@ -123,7 +135,7 @@ const styles = StyleSheet.create({
   },
   subtitle: { 
     fontSize: 16, 
-    color: '#666', 
+    color: '#333', 
     marginBottom: 20, 
     textAlign: 'center',
   },
@@ -168,7 +180,7 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   infoBox: {
-    backgroundColor: '#f0f0f0',
+    backgroundColor: '#40b912',
     borderRadius: 10,
     paddingVertical: 14,
     paddingHorizontal: 20,
@@ -183,12 +195,12 @@ const styles = StyleSheet.create({
   },
   label: {
     fontSize: 16,
-    fontWeight: '600',
-    color: '#555',
+    fontWeight: '900',
+    color: '#222',
   },
   value: {
     fontSize: 16,
-    fontWeight: '400',
+    fontWeight: '900',
     color: '#222',
   },
   info: {

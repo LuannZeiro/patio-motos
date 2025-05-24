@@ -3,11 +3,11 @@ import { View, Text, StyleSheet } from 'react-native';
 
 export default function VagasScreen() {
   const vagas = [
-    true, false, true, true, false, true, false, true, true, false, 
-    true, true, false, true, true, true, true, false, true, true,
-    false, true, true, false, true, false, true, true, false, true,
-    true, true, false, true, false, true, true, false, true, false,
-    true, false, true, true, true, true, false, true, true, true,
+    true, false, true, true, true, true, true, true, true, true, 
+    true, true, false, true, true, true, true, true, true, true,
+    false, true, true, true, true, true, true, true, true, true,
+    true, true, true, true, true, true, true, true, true, true,
+    true, true, true, true, true, true, true, true, true, true,
   ];
 
   const letras = ['A', 'B', 'C', 'D', 'E']; // A, B, C, D, E para as linhas
