@@ -13,6 +13,7 @@ cd patio-motos
 bash
 Copiar código
 npm install
+
 3️⃣ Instale as bibliotecas necessárias:
 bash
 Copiar código
@@ -24,6 +25,7 @@ Além disso, instale as dependências do React Navigation:
 bash
 Copiar código
 npx expo install react-native-screens react-native-safe-area-context
+
 4️⃣ Execute o projeto:
 bash
 Copiar código
